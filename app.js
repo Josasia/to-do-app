@@ -25,6 +25,7 @@ function onReady() {
     });
 }
 
-window.onload = function () {
+
+window.onload = function() {
   onReady();
 };
