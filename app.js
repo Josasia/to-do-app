@@ -4,28 +4,47 @@ function onReady() {
     const newToDoText = document.getElementById('newToDoText');
     const toDoList = document.getElementById('toDoList');
 
-    addToDoForm.addEventListener('submit', event => {
-      event.preventDefault();
+   addToDoForm.addEventListener('submit', event => {
+     event.preventDefault();
 
-      let title = newToDoText.value;
+  let title = newToDoText.value;
 
-      let newLi = document.createElement('li');
+  let newLi = document.createElement('li');
 
-      let checkbox = document.createElement('input');
+  let checkbox = document.createElement('input');
 
-      checkbox.type = "checkbox";
+  let deleteBut = document.createElement('button');
 
-      newLi.textContent = title;
+   checkbox.type = "checkbox";
 
-      newLi.appendChild(checkbox);
+   deleteBut.textContent = "x";
 
-      toDoList.appendChild(newLi);
+   newLi.textContent = title;
 
-      newToDoText.value = '';
-    });
+   newLi.appendChild(checkbox);
+
+   toDoList.appendChild(newLi);
+
+   toDoList.appendChild(deleteBut);
+
+   newToDoText.value = '';
+
+
+
+
+
+   deleteBut.addEventListener('click', event => {
+     toDoList.removeChild(newLi);
+     toDoList.removeChild(deleteBut);
+   });
+
+
+
+});
 }
 
 
 window.onload = function() {
+
   onReady();
 };
