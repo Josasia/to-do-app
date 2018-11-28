@@ -1,9 +1,8 @@
 
 function onReady() {
+
   const toDos = [];
   const addToDoForm = document.getElementById('addToDoForm');
-
-
 
   function createNewToDo() {
     const newToDoText = document.getElementById('newToDoText');
@@ -13,18 +12,19 @@ function onReady() {
       title: newToDoText.value,
       complete: false
     });
+
     newToDoText.value = '';
 
     renderTheUI();
   }
-}
+
 
   addToDoForm.addEventListener('submit', event => {
     event.preventDefault();
     createNewToDo():
   });
 
-  function renderTheUI(); {
+  function renderTheUI() {
     const toDoList = document.getElementById('toDoList');
 
     toDoList.textContent = '';
