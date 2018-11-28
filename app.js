@@ -21,7 +21,7 @@ function onReady() {
 
   addToDoForm.addEventListener('submit', event => {
     event.preventDefault();
-    createNewToDo():
+    createNewToDo();
   });
 
   function renderTheUI() {
@@ -43,4 +43,4 @@ function onReady() {
 }
 window.onload = function() {
   onReady();
-};
+}};
