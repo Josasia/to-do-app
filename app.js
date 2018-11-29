@@ -1,14 +1,14 @@
-
 function onReady() {
-
   const toDos = [];
   const addToDoForm = document.getElementById('addToDoForm');
+
 
   function createNewToDo() {
     const newToDoText = document.getElementById('newToDoText');
     if (!newToDoText.value) { return; }
 
     toDos.push({
+
       title: newToDoText.value,
       complete: false
     });
@@ -40,7 +40,7 @@ function onReady() {
       newLi.appendChild(checkbox);
   });
 
-}
+}};
 window.onload = function() {
   onReady();
-}};
+};
